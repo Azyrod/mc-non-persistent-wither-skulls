@@ -14,6 +14,7 @@ abstract class WitherSkullEntityMixin extends Entity {
 
     @Override
     public boolean shouldSave() {
+        // Prevents the skull to be saved if quitting the world / dimension before it reached an unloaded chunk
         return false;
     }
 }
