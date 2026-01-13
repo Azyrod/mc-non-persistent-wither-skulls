@@ -1,8 +1,6 @@
 package net.azyrod.nonPersistentWitherSkulls.mixins;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.WitherSkullEntity;
-import net.minecraft.server.world.ServerEntityManager;
 import net.minecraft.world.entity.EntityLike;
 import net.minecraft.world.entity.EntityTrackingStatus;
 import org.spongepowered.asm.mixin.Final;

@@ -3,10 +3,16 @@
   "id": "non-persistent-wither-skulls",
   "version": "${version}",
   "name": "Non Persistent Wither Skulls",
-  "description": "",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
+  "description": "Prevents wither skulls from accumulating in unloaded chunks and potentially fly forever",
+  "authors": ["Azyrod"],
+  "contributors": [],
+  "contact": {
+    "email": "azyrodyt@gmail.com",
+    "homepage": "https://github.com/Azyrod/mc-non-persistent-wither-skulls",
+    "issues": "https://github.com/Azyrod/mc-non-persistent-wither-skulls/issues",
+    "sources": "https://github.com/Azyrod/mc-non-persistent-wither-skulls"
+  },
+  "license": "Apache-2.0 license",
   "icon": "assets/non-persistent-wither-skulls/icon.png",
   "environment": "*",
   "entrypoints": {
