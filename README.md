@@ -23,7 +23,7 @@ The only thing it prevents you from doing is to keep one in stasis at your base 
 
 ## Bugs
 
-This mod is still in alpha, so there might be bugs.  
+I have tried my best to hunt them, but there might be bugs that I didn't find.  
 Feel free to open an issue for them and I'll do my best to fix them.
 
 Pull requests are also welcome.
