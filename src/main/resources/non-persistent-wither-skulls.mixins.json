@@ -4,8 +4,7 @@
   "package": "net.azyrod.nonPersistentWitherSkulls.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ServerEntityManager$ListenerMixin",
-    "WitherSkullEntityMixin"
+    "ServerEntityManager$ListenerMixin"
   ],
   "client": [
   ],

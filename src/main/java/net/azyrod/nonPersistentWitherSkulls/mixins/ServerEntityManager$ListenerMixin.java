@@ -2,6 +2,7 @@ package net.azyrod.nonPersistentWitherSkulls.mixins;
 
 import net.minecraft.entity.projectile.WitherSkullEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.entity.EntityLike;
 import net.minecraft.world.entity.EntityTrackingStatus;
 import org.spongepowered.asm.mixin.Final;
@@ -24,8 +25,8 @@ public class ServerEntityManager$ListenerMixin {
     @Inject(method = updateLoadStatusMethod, at = @At("RETURN"))
     private void updateLoadStatus(EntityTrackingStatus oldStatus, EntityTrackingStatus newStatus, CallbackInfo ci) {
         if (entity instanceof WitherSkullEntity skull && skull.getEntityWorld() instanceof ServerWorld world) {
-            if (!world.shouldTickEntityAt(skull.getBlockPos())) {
-                // If the skull reached an unloaded chunk, discard it
+            if (!world.shouldTickEntityAt(skull.getBlockPos()) && !skull.getVelocity().equals(Vec3d.ZERO)) {
+                // If the skull reached an unloaded chunk, and it has motion: discard it
                 skull.discard();
             }
         }
