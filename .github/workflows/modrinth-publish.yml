@@ -18,14 +18,13 @@ jobs:
           distribution: "temurin"
           java-version: 21
 
-      - name: Make Gradle Wrapper Executable
-        run: chmod +x ./gradlew
-
       - name: Build
         # run: ./gradlew -Pmod_version=${{ github.event.release.tag_name }} clean build
-        run: ./gradlew clean build
+        run: gradle clean build
 
       - uses: Kir-Antipov/mc-publish@v3.3
         with:
           modrinth-id: OSVw6Bfm
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          github-token: ${{ secrets.GITHUB_TOKEN }}
